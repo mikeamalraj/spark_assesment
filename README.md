@@ -14,7 +14,7 @@ This Code assessment represents a coding challenge for Data Engineering roles.
 In this challenge, we will use a dataset having the current job posting hosted by the City of New york which is available on the City of New York's official jobs site (https://www1.nyc.gov/jobs/index.page).
 
 - Internal postings availble to city employees and external postings availbale to the public are included. 
-- Data is accesible in the CSV file [nyc-jobs.csv](https://github.com/ProjectsUAE/data_engineering_takehome1/blob/main/dataset/nyc-jobs.csv)
+- Data is accesible in the CSV file [nyc-jobs.csv](./dataset/nyc-jobs.csv)
 
 This challenge is composed of following steps: 
 
@@ -49,7 +49,7 @@ This challenge is composed of following steps:
 - PySpark should be used
 - Feel free to use any libraries (you can use pip install, if needed)
 - Use a visualization library to present your analysis results.
-- Any learnings/ challenges/ considerations/ assumptions, please document in [MyDocument.md](https://github.com/ProjectsUAE/data_engineering_takehome1/blob/main/MyDocument.md)
+- Any learnings/ challenges/ considerations/ assumptions, please document in [MyDocument.md](./MyDocument.md)
 
 ## Technical Support:
 
@@ -59,21 +59,42 @@ This challenge is composed of following steps:
        b. In select scopes, give all repo permissions -> Click on Generate Token
        c. Copy the personal access token generated and copy it somewhere as it will be not visible again.
        d. In git terminal when you run git clone command (using HTTPS protocol) -> enter git id and for password enter the personal access token generated in previous step.
-        
-     - **Access to the parent repo will be removed within 4 days from the day you are made as collaborator**.
-     
+       
 2. Push the cloned repo into **your own** Github account.
      - **Please don't commit anything to the parent repo, everything should be done in your own Github repo**.
      
-3. Follow the installation instructions in [INSTALL.md](https://github.com/ProjectsUAE/data_engineering_takehome1/blob/main/INSTALL.md)
-4. Open the Jupyter notebook home page, using the link similar to the one highlighted in the picture 
+3. Follow the installation instructions
 
-  ![jupyter-notebook](https://github.com/ProjectsUAE/data_engineering_takehome1/blob/main/pictures/docker-compose.png)
+     # Installation Instructions
+ 
+    **IMPORTANT**: *Any installation requires at least 8Gb of RAM for proper operation.*
+    
+    1. Install Docker Desktop
+    
+    	  **Using Windows**: Install docker desktop https://docs.docker.com/desktop/install/windows-install/
+    	
+    	  **Using MacOS**: Follow instructions in the below link to setup your MacOS https://arjon.es/2019/setting-up-macbook-pro-for-development/
+    
+    2. Ensure Docker Desktop is up and running
+    	
+    3. Spin-up Spark cluster: 
+    	a. Open shell and run the below lines
+    	b. Change directory to your local directory 
+    		cd {project-directory}
+    	c. Docker compose
+    	
+    		docker compose -f ./docker-compose.yml --project-name my_assesment up  	
+    	
+       	Validate if Spark Cluster is up and running in the Spark Master UI with 2 worker nodes -
+	
+   
+4. Open the Jupyter notebook home page, using the link similar to the one highlighted in the picture 
+  ![jupyter-notebook](./pictures/docker-compose.png)
 
 5. Open the notebook (assesment_notebook.ipynb). 
 6. Read the documentation and run the cells accordingly. Once you create a spark session you should be able to see application **pyspark-assesment** running in the Spark Master UI as below. 
 
-  ![spark-application](https://github.com/ProjectsUAE/data_engineering_takehome1/blob/main/pictures/spark-application.png)
+  ![spark-application](./pictures/spark-application.png)
 
 By now you would have already have below things in place:
 
@@ -82,10 +103,5 @@ By now you would have already have below things in place:
 - Datasets read that is required for your activity.
 - Sample function within the notebook arriving at a basic KPI.
 - Sample test case for testing the function. 
-
-## Submission:
- 
-Once you have completed your work, share an invite of **your own** GitHub repo to **aacoe.techprojects@gmail.com**, and send out an email to our hiring team. 
-We will review your work.
 
 # Happy Coding!!
